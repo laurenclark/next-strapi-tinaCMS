@@ -12,6 +12,14 @@
 
 # Tina & NextJS & Strapi CMS
 
-http://localhost:1337
+### Strapi (Backend)
 
-http://localhost:1337/admin
+Admin -> http://localhost:1337/admin
+
+`yarn develop`
+
+### NextJS/Tina (Frontend)
+
+Client -> http://localhost:3000
+
+`yarn dev`
