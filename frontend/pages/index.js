@@ -1,11 +1,13 @@
+import Head from 'next/head'
+import { fetchGraphql } from 'react-tinacms-strapi'
+
+import { CMS_NAME } from '../lib/constants'
+
 import Container from '../components/container'
 import MoreStories from '../components/more-stories'
 import HeroPost from '../components/hero-post'
 import Intro from '../components/intro'
 import Layout from '../components/layout'
-import { getAllPosts } from '../lib/api'
-import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
 
 export default function Index({ allPosts }) {
     const heroPost = allPosts[0]
@@ -36,16 +38,28 @@ export default function Index({ allPosts }) {
 }
 
 export async function getStaticProps() {
-    const allPosts = getAllPosts([
-        'title',
-        'date',
-        'slug',
-        'author',
-        'coverImage',
-        'excerpt'
-    ])
+    const postResults = await fetchGraphql(
+        process.env.STRAPI_URL,
+        `query{
+            blogPosts {
+                title
+                date
+                slug
+                author {
+                    name
+                picture { 
+                    url
+                    }
+                }
+                excerpt
+                coverImage {
+                    url
+                }
+            }
+        }`
+    )
 
     return {
-        props: { allPosts }
+        props: { allPosts: postResults.data.blogPosts }
     }
 }
