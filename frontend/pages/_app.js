@@ -1,4 +1,4 @@
-import '../styles/index.css'
+import { useMemo } from 'react'
 
 import {
     StrapiMediaStore,
@@ -7,7 +7,7 @@ import {
 } from 'react-tinacms-strapi'
 import { TinaCMS, TinaProvider } from 'tinacms'
 
-import { useMemo } from 'react'
+import '../styles/index.css'
 
 export default function App({ Component, pageProps }) {
     const cms = useMemo(
