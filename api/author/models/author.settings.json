@@ -20,6 +20,10 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "blog_posts": {
+      "via": "author",
+      "collection": "blog-post"
     }
   }
 }
