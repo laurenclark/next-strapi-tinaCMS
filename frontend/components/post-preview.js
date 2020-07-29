@@ -11,6 +11,7 @@ export default function PostPreview({
     author,
     slug
 }) {
+    const authorPicture = process.env.STRAPI_URL + author.picture.url
     return (
         <div>
             <div className="mb-5">
@@ -25,7 +26,7 @@ export default function PostPreview({
                 <DateFormater dateString={date} />
             </div>
             <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-            <Avatar name={author.name} picture={author.picture} />
+            <Avatar name={author.name} picture={authorPicture} />
         </div>
     )
 }
