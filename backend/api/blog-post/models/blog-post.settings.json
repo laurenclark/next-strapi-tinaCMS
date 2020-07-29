@@ -9,13 +9,13 @@
     "timestamps": true
   },
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
-    "Content": {
+    "content": {
       "type": "text"
     },
-    "Excerpt": {
+    "excerpt": {
       "type": "text"
     },
     "coverImage": {
@@ -27,13 +27,15 @@
       "plugin": "upload",
       "required": false
     },
-    "Slug": {
+    "slug": {
       "type": "uid",
-      "targetField": "Title"
+      "required": true,
+      "targetField": "title"
     },
-    "Date": {
+    "date": {
       "type": "date",
-      "required": true
+      "required": false,
+      "default": "2020-07-29T11:00:00.000Z"
     },
     "author": {
       "model": "author",
