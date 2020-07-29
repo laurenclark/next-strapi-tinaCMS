@@ -12,6 +12,8 @@ import Layout from '../components/layout'
 export default function Index({ allPosts }) {
     const heroPost = allPosts[0]
     const morePosts = allPosts.slice(1)
+    const coverImage = process.env.STRAPI_URL + heroPost.coverImage.url
+
     return (
         <>
             <Layout>
@@ -23,7 +25,7 @@ export default function Index({ allPosts }) {
                     {heroPost && (
                         <HeroPost
                             title={heroPost.title}
-                            coverImage={heroPost.coverImage}
+                            coverImage={coverImage}
                             date={heroPost.date}
                             author={heroPost.author}
                             slug={heroPost.slug}
