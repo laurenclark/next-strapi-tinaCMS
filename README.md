@@ -30,7 +30,10 @@ Client -> http://localhost:3000
 /*--------------------------------------------------------------
 ## React & Next
 --------------------------------------------------------------*/
-import React from 'react'
+import React, { memo } from 'react'
+import { useRouter } from 'next/router'
+import ErrorPage from 'next/error'
+import Head from 'next/head'
 
 /*--------------------------------------------------------------
 ## Strapi
@@ -44,20 +47,25 @@ import {
 /*--------------------------------------------------------------
 ## Tina Specific, Forms, Field Plugins, Custom Hooks(useHook)
 --------------------------------------------------------------*/
-
 import { useCMS } from 'tinacms'
 import { HtmlFieldPlugin, MarkdownFieldPlugin } from 'react-tinacms-editor'
 import PostForm from '../forms/PostForm'
 
 /*--------------------------------------------------------------
-## Styling
+## Components / Other
+--------------------------------------------------------------*/
+import Container from '../../components/container'
+import PostBody from '../../components/post-body'
+import Header from '../../components/header'
+
+import { CMS_NAME } from '../../lib/constants'
+import markdownToHtml from '../../lib/markdownToHtml'
+
+/*--------------------------------------------------------------
+## Styling (if not using Tailwind)
 --------------------------------------------------------------*/
 import { css } from '@emotion/core'
 import { GlobalStyles } from './GlobalStyles'
 
-/*--------------------------------------------------------------
-## Components / Other
---------------------------------------------------------------*/
-import Layout from '../components/layouts/layout'
-import ReadLink from '../components/ui/read-link'
+
 ```
