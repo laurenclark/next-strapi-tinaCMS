@@ -12,6 +12,12 @@
 
 # Tina & NextJS & Strapi CMS
 
+- 🟩 Node 12.18.1
+
+- ✈️ Tailwind CSS (With PostCSS) 
+
+- IS NOT USIN BABEL RN [Next Babel Docs](https://nextjs.org/docs/advanced-features/customizing-babel-config) but it's there just need to add .babelrc
+
 ## Strapi (Backend)
 
 Admin -> http://localhost:1337/admin
