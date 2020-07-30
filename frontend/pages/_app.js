@@ -27,16 +27,23 @@ export default function App({ Component, pageProps }) {
     )
     return (
         <TinaProvider cms={cms}>
-            <StrapiProvider
-                onLogin={() => {
-                    /* TODO */
-                }}
-                onLogout={() => {
-                    /* TODO*/
-                }}
-            >
+            <StrapiProvider>
+                onLogin={enterEditMode}
+                onLogout={exitEditMode}
                 <Component {...pageProps} />
             </StrapiProvider>
         </TinaProvider>
     )
+}
+
+const enterEditMode = () => {
+    return fetch(`/api/preview`).then(() => {
+        window.location.href = window.location.pathname
+    })
+}
+
+const exitEditMode = () => {
+    return fetch(`/api/reset-preview`).then(() => {
+        window.location.reload()
+    })
 }
