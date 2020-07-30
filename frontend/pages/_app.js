@@ -1,13 +1,14 @@
 import { useMemo } from 'react'
 
+import { useCMS } from '@tinacms/react-core'
 import {
     StrapiMediaStore,
     StrapiProvider,
     StrapiClient
 } from 'react-tinacms-strapi'
-
-import { useCMS } from '@tinacms/react-core'
 import { TinaCMS, TinaProvider } from 'tinacms'
+
+import Button from '../components/ui/button'
 
 import '../styles/index.css'
 
@@ -30,6 +31,7 @@ export default function App({ Component, pageProps }) {
     return (
         <TinaProvider cms={cms}>
             <StrapiProvider onLogin={enterEditMode} onLogout={exitEditMode}>
+                <EditButton />
                 <Component {...pageProps} />
             </StrapiProvider>
         </TinaProvider>
@@ -47,11 +49,17 @@ const exitEditMode = () => {
         window.location.reload()
     })
 }
+
 export const EditButton = () => {
     const cms = useCMS()
-    return (
-        <button onClick={() => (cms.enabled ? cms.disable() : cms.enable())}>
-            {cms.enabled ? `Stop Editing ` : `Edit this Site `}
-        </button>
-    )
+    const isEnabled = cms.enabled ? `Stop Editing ` : `Edit this Site `
+
+    function handleCmsToggle() {
+        if (cms.enabled) {
+            return cms.disable()
+        }
+        return cms.enable()
+    }
+
+    return <Button handler={handleCmsToggle}>{isEnabled}</Button>
 }
