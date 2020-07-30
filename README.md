@@ -32,6 +32,8 @@ Client -> http://localhost:3000
 
 `yarn dev`
 
+(If you want to run both from root directory you can do with `yarn start-client` and `yarn start-server`, but they need their own terminal instances)
+
 ## CMS Setup
 
 - You need to create a .env file with the `STRAPI_URL=someurl.com?=orLocalhost:port` and put this in the Frontend directory
