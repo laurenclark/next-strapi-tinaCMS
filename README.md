@@ -28,6 +28,8 @@ Admin -> http://localhost:1337/admin
 
 ## NextJS/Tina (Frontend)
 
+You need to create a .env file with the STRAPI_URL and put this in the Frontend directory
+
 Client -> http://localhost:3000
 
 `yarn dev`
