@@ -4,6 +4,7 @@ import Head from 'next/head'
 
 import { fetchGraphql } from 'react-tinacms-strapi'
 import { useForm, usePlugin } from 'tinacms'
+import { InlineForm } from 'react-tinacms-inline'
 
 import Container from '../../components/container'
 import PostBody from '../../components/post-body'
@@ -64,15 +65,19 @@ export default function Post({ post: initialPost, morePosts, preview }) {
                                     }
                                 />
                             </Head>
-                            <PostHeader
-                                title={post.title}
-                                coverImage={
-                                    process.env.STRAPI_URL + post.coverImage.url
-                                }
-                                date={post.date}
-                                author={post.author}
-                            />
-                            <PostBody content={post.content} />
+                            {/* 🦙 Wrap the blog in the inline form component with form prop */}
+                            <InlineForm form={form} initialStatus={'active'}>
+                                <PostHeader
+                                    title={post.title}
+                                    coverImage={
+                                        process.env.STRAPI_URL +
+                                        post.coverImage.url
+                                    }
+                                    date={post.date}
+                                    author={post.author}
+                                />
+                                <PostBody content={post.content} />
+                            </InlineForm>
                         </article>
                     </>
                 )}
