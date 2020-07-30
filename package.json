@@ -1,0 +1,14 @@
+{
+    "name": "nextjs-tina-strapi",
+    "version": "1.0.0",
+    "description": "TinaCMS with NextJS & Strapi",
+    "main": "n/a",
+    "repository": "https://github.com/rawnet/nextjs-tina-strapi.git",
+    "author": "Lauren Clark @ Rawnet lclark@rawnet.com",
+    "license": "MIT",
+    "private": true,
+    "scripts": {
+        "start-client": "cd frontend && yarn dev",
+        "start-server": "cd backend && yarn develop"
+    }
+}
