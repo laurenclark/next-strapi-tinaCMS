@@ -131,7 +131,9 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
+frontend/.env
+backend/.env
+
 .env.test
 
 # parcel-bundler cache (https://parceljs.org/)
@@ -258,7 +260,6 @@ pids
 logs
 results
 node_modules
-.node_history
 
 ############################
 # Tests
@@ -271,8 +272,9 @@ coverage
 # Strapi
 ############################
 
-.env
-license.txt
-exports
-.cache
-build
+backend/.env
+backend/license.txt
+backend/exports
+backend/.cache
+backend/build
+backend/.gitignore
