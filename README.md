@@ -36,6 +36,7 @@ Client -> http://localhost:3000
 
 - You need to create a .env file with the `STRAPI_URL=someurl.com?=orLocalhost:port` and put this in the Frontend directory
 - You need public permissions set so that Strapi can be queried by the client. Head to Roles & Permissions and check `count`, `find` and `findone` for all the the content types. 
+- To be able to access preview/edit mode you need to be logged in, so create a user from the CMS and use those credentials.
 
 Note: The DB is SQLlite and local so not in the repo, you'll need to add some dummy content to view. 
 
