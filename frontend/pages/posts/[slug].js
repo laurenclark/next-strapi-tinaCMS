@@ -17,7 +17,7 @@ import { CMS_NAME } from '../../lib/constants'
 export default function Post({ post: initialPost, morePosts, preview }) {
     // 📝 https://tinacms.org/docs/plugins/forms
 
-    // The config object for the fields.
+    // 💬 The config object for the fields.
     const formConfig = {
         id: initialPost.id,
         label: 'Blog Post',
@@ -28,8 +28,14 @@ export default function Post({ post: initialPost, morePosts, preview }) {
         fields: []
     }
 
-    // Pass in formConfig and use it in the context of the post, and pass in the form.
+    // 💬 Pass in post(data) -> all the data that is made editable by the form
+    // (form) -> form object that the hook created from the deconstructed form array.
+
+    // This turns your form into an inlineForm.
+    // The form config -> https://final-form.org/docs/final-form/types/Config
     const [post, form] = useForm(formConfig)
+
+    // Register the form with the CMS
     usePlugin(form)
 
     const router = useRouter()
