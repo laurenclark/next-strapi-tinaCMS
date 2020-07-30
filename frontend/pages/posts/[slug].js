@@ -3,7 +3,7 @@ import ErrorPage from 'next/error'
 import Head from 'next/head'
 
 import { fetchGraphql } from 'react-tinacms-strapi'
-import { useForm, usePlugin } from 'tinacms'
+import { useCMS, useForm, usePlugin } from 'tinacms'
 import { InlineForm } from 'react-tinacms-inline'
 
 import Container from '../../components/container'
@@ -15,7 +15,8 @@ import PostTitle from '../../components/post-title'
 
 import { CMS_NAME } from '../../lib/constants'
 
-export default function Post({ post: initialPost, morePosts, preview }) {
+export default function Post({ post: initialPost, preview }) {
+    const cms = useCMS()
     // 📝 https://tinacms.org/docs/plugins/forms
 
     // 💬 The config object for the fields.
@@ -23,8 +24,36 @@ export default function Post({ post: initialPost, morePosts, preview }) {
         id: initialPost.id,
         label: 'Blog Post',
         initialValues: initialPost,
-        onSubmit: () => {
-            alert('Saving!')
+        onSubmit: async (values) => {
+            const saveMutation = `
+                mutation UpdateBlogPost(
+                    $id: ID!
+                    $title: String
+                    $content: String
+                    $coverImageId: ID
+                ) {
+                    updateBlogPost(
+                    input: {
+                        where: { id: $id }
+                        data: { title: $title, content: $content, coverImage: $coverImageId}
+                    }
+                        ) {
+                        blogPost {
+                            id
+                        }
+                    }
+                }`
+            const response = await cms.api.strapi.fetchGraphql(saveMutation, {
+                id: values.id,
+                title: values.title,
+                content: values.content,
+                coverImageId: cms.media.store.getFileId(values.coverImage.url)
+            })
+            if (response.data) {
+                cms.alerts.success('Changes Saved')
+            } else {
+                cms.alerts.error('Error saving changes')
+            }
         },
         fields: []
     }
