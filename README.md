@@ -16,6 +16,8 @@
 
 - ✈️ Tailwind CSS (With PostCSS) 
 
+- Based off of this (I think) [NextJS + Strapi CMS Example](https://github.com/vercel/next.js/tree/canary/examples/cms-strapi)
+
 - IS NOT USIN BABEL RN [Next Babel Docs](https://nextjs.org/docs/advanced-features/customizing-babel-config) but it's there just need to add .babelrc
 
 ## Strapi (Backend)
