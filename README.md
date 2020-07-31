@@ -12,13 +12,13 @@
 
 # Tina & NextJS & Strapi CMS
 
-- 🟩 Node 12.18.1
+-   🟩 Node 12.18.1
 
-- ✈️ Tailwind CSS (With PostCSS) 
+-   ✈️ Tailwind CSS (With PostCSS)
 
-- Based off of this (I think) [NextJS + Strapi CMS Example](https://github.com/vercel/next.js/tree/canary/examples/cms-strapi)
+-   Based off of this (I think) [NextJS + Strapi CMS Example](https://github.com/vercel/next.js/tree/canary/examples/cms-strapi)
 
-- IS NOT USIN BABEL RN [Next Babel Docs](https://nextjs.org/docs/advanced-features/customizing-babel-config) but it's there just need to add .babelrc
+-   IS NOT USIN BABEL RN [Next Babel Docs](https://nextjs.org/docs/advanced-features/customizing-babel-config) but it's there just need to add .babelrc
 
 ## Strapi (Backend)
 
@@ -36,12 +36,12 @@ Client -> http://localhost:3000
 
 ## CMS Setup
 
-- Create a .env file with the `STRAPI_URL=someurl.com?=orLocalhost:port` and put this in the Frontend directory
-- You need public permissions set so that Strapi can be queried by the client. Head to Roles & Permissions and check `count`, `find` and `findone` for all the the content types. 
-- To be able to access preview/edit mode you need to be logged in, so create a user from the CMS and use those credentials.
-- Create an authorised user in order to log in and edit, you'll need all permissions for content-types and all permissions for Uploads (or you won't be able to upload images to the media library)
+-   Create a .env file with the `STRAPI_URL=someurl.com?=orLocalhost:port` and put this in the Frontend directory
+-   You need public permissions set so that Strapi can be queried by the client. Head to Roles & Permissions and check `count`, `find` and `findone` for all the the content types.
+-   To be able to access preview/edit mode you need to be logged in, so create a user from the CMS and use those credentials.
+-   Create an authorised user in order to log in and edit, you'll need all permissions for content-types and all permissions for Uploads (or you won't be able to upload images to the media library)
 
-Note: The DB is SQLlite and local so not in the repo, you'll need to add some dummy content to view. 
+Note: The DB is SQLlite and local so not in the repo, you'll need to add some dummy content to view.
 
 ### Imports Organisation
 
@@ -85,6 +85,4 @@ import markdownToHtml from '../../lib/markdownToHtml'
 --------------------------------------------------------------*/
 import { css } from '@emotion/core'
 import { GlobalStyles } from './GlobalStyles'
-
-
 ```

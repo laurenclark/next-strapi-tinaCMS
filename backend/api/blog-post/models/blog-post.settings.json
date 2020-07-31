@@ -1,45 +1,43 @@
 {
-  "kind": "collectionType",
-  "collectionName": "blog_posts",
-  "info": {
-    "name": "Blog Post"
-  },
-  "options": {
-    "increments": true,
-    "timestamps": true
-  },
-  "attributes": {
-    "title": {
-      "type": "string"
+    "kind": "collectionType",
+    "collectionName": "blog_posts",
+    "info": {
+        "name": "Blog Post"
     },
-    "content": {
-      "type": "text"
+    "options": {
+        "increments": true,
+        "timestamps": true
     },
-    "excerpt": {
-      "type": "text"
-    },
-    "coverImage": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": false
-    },
-    "slug": {
-      "type": "uid",
-      "required": true,
-      "targetField": "title"
-    },
-    "date": {
-      "type": "date",
-      "required": false,
-      "default": "2020-07-29T11:00:00.000Z"
-    },
-    "author": {
-      "model": "author",
-      "via": "blog_posts"
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "content": {
+            "type": "text"
+        },
+        "excerpt": {
+            "type": "text"
+        },
+        "coverImage": {
+            "model": "file",
+            "via": "related",
+            "allowedTypes": ["images"],
+            "plugin": "upload",
+            "required": false
+        },
+        "slug": {
+            "type": "uid",
+            "required": true,
+            "targetField": "title"
+        },
+        "date": {
+            "type": "date",
+            "required": false,
+            "default": "2020-07-29T11:00:00.000Z"
+        },
+        "author": {
+            "model": "author",
+            "via": "blog_posts"
+        }
     }
-  }
 }

@@ -1,38 +1,38 @@
 {
-  "name": "tina-strapi-server",
-  "private": true,
-  "version": "0.1.0",
-  "description": "A Strapi application",
-  "scripts": {
-    "develop": "strapi develop",
-    "start": "strapi start",
-    "build": "strapi build",
-    "strapi": "strapi"
-  },
-  "devDependencies": {},
-  "dependencies": {
-    "knex": "<0.20.0",
-    "sqlite3": "latest",
-    "strapi": "3.1.1",
-    "strapi-admin": "3.1.1",
-    "strapi-connector-bookshelf": "3.1.1",
-    "strapi-plugin-content-manager": "3.1.1",
-    "strapi-plugin-content-type-builder": "3.1.1",
-    "strapi-plugin-email": "3.1.1",
-    "strapi-plugin-graphql": "3.1.1",
-    "strapi-plugin-upload": "3.1.1",
-    "strapi-plugin-users-permissions": "3.1.1",
-    "strapi-utils": "3.1.1"
-  },
-  "author": {
-    "name": "A Strapi developer"
-  },
-  "strapi": {
-    "uuid": "dc6d9d77-3dd0-4f1b-bafd-09b1d2c3aefe"
-  },
-  "engines": {
-    "node": ">=10.0.0",
-    "npm": ">=6.0.0"
-  },
-  "license": "MIT"
+    "name": "tina-strapi-server",
+    "private": true,
+    "version": "0.1.0",
+    "description": "A Strapi application",
+    "scripts": {
+        "develop": "strapi develop",
+        "start": "strapi start",
+        "build": "strapi build",
+        "strapi": "strapi"
+    },
+    "devDependencies": {},
+    "dependencies": {
+        "knex": "<0.20.0",
+        "sqlite3": "latest",
+        "strapi": "3.1.1",
+        "strapi-admin": "3.1.1",
+        "strapi-connector-bookshelf": "3.1.1",
+        "strapi-plugin-content-manager": "3.1.1",
+        "strapi-plugin-content-type-builder": "3.1.1",
+        "strapi-plugin-email": "3.1.1",
+        "strapi-plugin-graphql": "3.1.1",
+        "strapi-plugin-upload": "3.1.1",
+        "strapi-plugin-users-permissions": "3.1.1",
+        "strapi-utils": "3.1.1"
+    },
+    "author": {
+        "name": "A Strapi developer"
+    },
+    "strapi": {
+        "uuid": "dc6d9d77-3dd0-4f1b-bafd-09b1d2c3aefe"
+    },
+    "engines": {
+        "node": ">=10.0.0",
+        "npm": ">=6.0.0"
+    },
+    "license": "MIT"
 }

@@ -1,29 +1,27 @@
 {
-  "kind": "collectionType",
-  "collectionName": "authors",
-  "info": {
-    "name": "Author"
-  },
-  "options": {
-    "increments": true,
-    "timestamps": true
-  },
-  "attributes": {
-    "name": {
-      "type": "string"
+    "kind": "collectionType",
+    "collectionName": "authors",
+    "info": {
+        "name": "Author"
     },
-    "picture": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": false
+    "options": {
+        "increments": true,
+        "timestamps": true
     },
-    "blog_posts": {
-      "via": "author",
-      "collection": "blog-post"
+    "attributes": {
+        "name": {
+            "type": "string"
+        },
+        "picture": {
+            "model": "file",
+            "via": "related",
+            "allowedTypes": ["images"],
+            "plugin": "upload",
+            "required": false
+        },
+        "blog_posts": {
+            "via": "author",
+            "collection": "blog-post"
+        }
     }
-  }
 }

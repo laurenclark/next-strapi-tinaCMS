@@ -1,0 +1,8 @@
+frontend/.next
+frontend/node_modules
+.cache
+.tmp
+backend/.cache
+backend/build
+backend/exports
+backend/node_modules
