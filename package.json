@@ -12,5 +12,13 @@
         "start-server": "cd backend && yarn develop",
         "format-check": "prettier --check .",
         "format": "prettier --write ."
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "yarn format-check"
+        }
+    },
+    "devDependencies": {
+        "husky": "^4.2.5"
     }
 }
