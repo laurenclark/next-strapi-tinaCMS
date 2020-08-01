@@ -9,7 +9,7 @@
     "private": true,
     "scripts": {
         "start-client": "cd frontend && yarn dev",
-        "start-server": "cd backend && yarn develop",
+        "start-cms": "cd backend && yarn develop",
         "format-check": "prettier --check .",
         "format": "prettier --write ."
     },
