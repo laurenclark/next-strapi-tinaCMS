@@ -127,13 +127,13 @@ export async function getStaticProps({ params, preview, previewData }) {
             slug
             content
             author {
-            name
-            picture { 
-                url
-            }
+                name
+                picture { 
+                    url
+                }
             }
             coverImage {
-            url
+                url
             }
         }
         }
