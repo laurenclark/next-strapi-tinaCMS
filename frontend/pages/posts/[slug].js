@@ -5,7 +5,6 @@ import Head from 'next/head'
 import { fetchGraphql } from 'react-tinacms-strapi'
 import { useCMS, useForm, usePlugin, usePlugins } from 'tinacms'
 import { InlineForm } from 'react-tinacms-inline'
-import { HtmlFieldPlugin, MarkdownFieldPlugin } from 'react-tinacms-editor'
 
 import Container from '../../components/container'
 import Header from '../../components/header'
@@ -19,8 +18,6 @@ import { CMS_NAME } from '../../lib/constants'
 export default function Post({ post: initialPost, preview }) {
     const cms = useCMS()
     // 📝 https://tinacms.org/docs/plugins/forms
-
-    usePlugins([HtmlFieldPlugin, MarkdownFieldPlugin])
 
     // 💬 The config object for the fields.
     const formConfig = {
