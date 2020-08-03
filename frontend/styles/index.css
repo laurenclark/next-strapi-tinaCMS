@@ -1,6 +1,30 @@
-@tailwind base;
+@tailwind base; //https://unpkg.com/tailwindcss@1.6.1/dist/base.css
 
-/* Write your own custom base styles here */
+h1 {
+    @apply text-6xl;
+}
+h2 {
+    @apply text-4xl;
+}
+h3 {
+    @apply text-3xl;
+}
+
+h4 {
+    @apply text-2xl;
+}
+
+h5 {
+    @apply text-xl;
+}
+
+p {
+    @apply my-5 subpixel-antialiased antialiased leading-relaxed;
+}
+
+a {
+    @apply text-blue-600 underline;
+}
 
 /* Start purging... */
 @tailwind components;
