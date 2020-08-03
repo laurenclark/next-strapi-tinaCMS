@@ -3,8 +3,9 @@ import ErrorPage from 'next/error'
 import Head from 'next/head'
 
 import { fetchGraphql } from 'react-tinacms-strapi'
-import { useCMS, useForm, usePlugin } from 'tinacms'
+import { useCMS, useForm, usePlugin, usePlugins } from 'tinacms'
 import { InlineForm } from 'react-tinacms-inline'
+import { HtmlFieldPlugin, MarkdownFieldPlugin } from 'react-tinacms-editor'
 
 import Container from '../../components/container'
 import Header from '../../components/header'
@@ -19,6 +20,8 @@ export default function Post({ post: initialPost, preview }) {
     const cms = useCMS()
     // 📝 https://tinacms.org/docs/plugins/forms
 
+    usePlugins([HtmlFieldPlugin, MarkdownFieldPlugin])
+
     // 💬 The config object for the fields.
     const formConfig = {
         id: initialPost.id,
@@ -31,11 +34,12 @@ export default function Post({ post: initialPost, preview }) {
                     $title: String
                     $content: String
                     $coverImageId: ID
+                    $slug: String
                 ) {
                     updateBlogPost(
                     input: {
                         where: { id: $id }
-                        data: { title: $title, content: $content, coverImage: $coverImageId}
+                        data: { title: $title, content: $content, coverImage: $coverImageId, slug: $slug}
                     }
                         ) {
                         blogPost {
@@ -47,6 +51,7 @@ export default function Post({ post: initialPost, preview }) {
                 id: values.id,
                 title: values.title,
                 content: values.content,
+                slug: values.slug,
                 coverImageId: cms.media.store.getFileId(values.coverImage.url)
             })
             if (response.data) {
@@ -55,10 +60,27 @@ export default function Post({ post: initialPost, preview }) {
                 cms.alerts.error('Error saving changes')
             }
         },
-        fields: []
+        // 🦙 You can just pass a string here for [name] as it's more like a YAML/JSON file,
+        // and it knows what 'title' string is from the query, it's a reference to that.
+        // More info at: https://final-form.org/
+
+        fields: [
+            {
+                name: 'title',
+                component: 'text',
+                label: 'Title',
+                description: 'Post title'
+            },
+            {
+                name: 'slug',
+                component: 'text',
+                label: 'Slug',
+                description: '/posts/your-slug-here'
+            }
+        ]
     }
 
-    // 💬 Pass in post(data) -> all the data that is made editable by the form
+    // 🦙 Pass in post(data) -> all the data that is made editable by the form
     // (form) -> form object that the hook created from the deconstructed form array.
 
     // This turns your form into an inlineForm.
