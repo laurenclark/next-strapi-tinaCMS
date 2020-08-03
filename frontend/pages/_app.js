@@ -9,17 +9,19 @@ import {
 import { TinaCMS, TinaProvider } from 'tinacms'
 
 import Button from '../components/ui/button'
-
 import '../styles/index.css'
+
 export default function App({ Component, pageProps }) {
     console.log('Page props: ' + pageProps.preview)
     const cms = useMemo(
         () =>
             new TinaCMS({
                 // Only enable for those with permissions
-                toolbar: pageProps.preview,
                 enabled: pageProps.preview,
-                sidebar: pageProps.preview,
+                toolbar: true,
+                sidebar: {
+                    position: 'overlay'
+                },
                 apis: {
                     strapi: new StrapiClient(process.env.STRAPI_URL)
                 },
