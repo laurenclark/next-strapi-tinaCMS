@@ -20,6 +20,8 @@
 
 -   IS NOT USIN BABEL RN [Next Babel Docs](https://nextjs.org/docs/advanced-features/customizing-babel-config) but it's there just need to add .babelrc
 
+> 🤚 Make sure you run `yarn upgrade` on the backend and frontend before you start work so that dependencies are up-to-date and we are working with the latest Strapi, Tina and Next (Tina is iterating quite fast)
+
 ## Strapi (Backend)
 
 Admin -> http://localhost:1337/admin
@@ -32,7 +34,7 @@ Client -> http://localhost:3000
 
 `yarn dev`
 
-(If you want to run both from root directory you can do with `yarn start-client` and `yarn start-server`, but they need their own terminal instances)
+> If you want to run both from root directory you can do with `yarn start-client` and `yarn start-cms`, but they need their own terminal instances
 
 ## CMS Setup
 
