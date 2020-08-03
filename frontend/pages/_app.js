@@ -11,8 +11,8 @@ import { TinaCMS, TinaProvider } from 'tinacms'
 import Button from '../components/ui/button'
 
 import '../styles/index.css'
-
 export default function App({ Component, pageProps }) {
+    console.log('Page props: ' + pageProps.preview)
     const cms = useMemo(
         () =>
             new TinaCMS({

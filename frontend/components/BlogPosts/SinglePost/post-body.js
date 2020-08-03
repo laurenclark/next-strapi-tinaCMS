@@ -1,6 +1,6 @@
 import { InlineWysiwyg } from 'react-tinacms-editor'
 import ReactMarkdown from 'react-markdown'
-import markdownStyles from './markdown-styles.module.css'
+import markdownStyles from '../../markdown-styles.module.css'
 
 export default function PostBody({ content }) {
     return (

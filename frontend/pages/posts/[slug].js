@@ -7,11 +7,11 @@ import { useCMS, useForm, usePlugin } from 'tinacms'
 import { InlineForm } from 'react-tinacms-inline'
 
 import Container from '../../components/container'
-import PostBody from '../../components/post-body'
 import Header from '../../components/header'
-import PostHeader from '../../components/post-header'
 import Layout from '../../components/layout'
-import PostTitle from '../../components/post-title'
+import PostHeader from '../../components/BlogPosts/SinglePost/post-header'
+import PostTitle from '../../components/BlogPosts/SinglePost/post-title'
+import PostBody from '../../components/BlogPosts/SinglePost/post-body'
 
 import { CMS_NAME } from '../../lib/constants'
 
