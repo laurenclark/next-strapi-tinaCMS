@@ -1,4 +1,4 @@
-import { InlineText, InlineImage } from 'react-tinacms-inline'
+import { InlineTextarea, InlineImage } from 'react-tinacms-inline'
 import { useCMS } from 'tinacms'
 
 import PostTitle from './post-title'
@@ -11,7 +11,7 @@ export default function PostHeader({ title, coverImage, date, author }) {
         <>
             <PostTitle>
                 {/* Replace the child property with a child component with the name=title */}
-                <InlineText name="title" />
+                <InlineTextarea name="title" />
             </PostTitle>
             <div className="hidden md:block md:mb-12">
                 <Avatar
