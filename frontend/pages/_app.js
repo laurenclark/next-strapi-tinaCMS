@@ -27,7 +27,7 @@ export default function App({ Component, pageProps }) {
                     store: new StrapiMediaStore(process.env.STRAPI_URL)
                 }
             }),
-        []
+        [pageProps.preview]
     )
     return (
         <TinaProvider cms={cms}>
