@@ -15,11 +15,39 @@
 }
 
 .markdown,
+.wysiwyg-wrapper blockquote {
+}
+
+.markdown,
 .wysiwyg-wrapper h2 {
-    @apply text-3xl mt-12 mb-4 leading-snug;
+    @apply text-3xl mt-12 mb-4 leading-snug  font-semibold;
 }
 
 .markdown,
 .wysiwyg-wrapper h3 {
-    @apply text-2xl mt-8 mb-4 leading-snug;
+    @apply text-2xl mt-8 mb-4 leading-snug  font-semibold;
+}
+
+.markdown,
+.wysiwyg-wrapper h4 {
+    @apply text-xl mt-8 mb-4 leading-snug  font-semibold;
+}
+
+.editormd-styles h1 {
+    @apply text-4xl font-semibold;
+}
+
+.editormd-styles h2 {
+    @apply text-3xl font-semibold;
+}
+
+.editormd-styles h3 {
+    @apply text-2xl font-semibold;
+}
+
+.editormd-styles h4 {
+    @apply text-xl font-semibold;
+}
+.editormd-styles h5 {
+    @apply font-semibold;
 }
