@@ -1,5 +1,13 @@
 @tailwind base; //https://unpkg.com/tailwindcss@1.6.1/dist/base.css
 
+p {
+    @apply my-5 subpixel-antialiased antialiased leading-relaxed;
+}
+
+a {
+    @apply text-blue-600 underline;
+}
+
 /* Start purging... */
 @tailwind components;
 /* Stop purging. */
