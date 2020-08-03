@@ -19,9 +19,7 @@ export default function App({ Component, pageProps }) {
                 // Only enable for those with permissions
                 toolbar: pageProps.preview,
                 enabled: pageProps.preview,
-                sidebar: {
-                    position: 'overlay'
-                },
+                sidebar: pageProps.preview,
                 apis: {
                     strapi: new StrapiClient(process.env.STRAPI_URL)
                 },
