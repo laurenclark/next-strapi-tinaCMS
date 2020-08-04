@@ -33,7 +33,6 @@ export default function App({ Component, pageProps }) {
     return (
         <TinaProvider cms={cms}>
             <StrapiProvider onLogin={enterEditMode} onLogout={exitEditMode}>
-                <EditButton />
                 <Component {...pageProps} />
             </StrapiProvider>
         </TinaProvider>
@@ -50,18 +49,4 @@ const exitEditMode = () => {
     return fetch(`/api/reset-preview`).then(() => {
         window.location.reload()
     })
-}
-
-export const EditButton = () => {
-    const cms = useCMS()
-    const isEnabled = cms.enabled ? `Stop Editing ` : `Edit this Site `
-
-    function handleCmsToggle() {
-        if (cms.enabled) {
-            return cms.disable()
-        }
-        return cms.enable()
-    }
-
-    return <Button handler={handleCmsToggle}>{isEnabled}</Button>
 }
