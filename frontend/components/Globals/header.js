@@ -2,14 +2,14 @@ import Link from 'next/link'
 
 export default function Header() {
     return (
-        <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
-            <div class="flex items-center flex-shrink-0 text-white mr-6">
-                <span class="font-semibold text-xl tracking-tight">
-                    TinaCMS
+        <nav class="flex items-center justify-between flex-wrap p-6 mb-10 border-b">
+            <div class="flex items-center flex-shrink-0 text-black mr-6">
+                <span class="font-semibold text-6xl font-bold tracking-tight">
+                    TinaCMS.
                 </span>
             </div>
             <div class="block lg:hidden">
-                <button class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+                <button class="flex items-center px-3 py-2 text-black border-teal-400 hover:text-white hover:border-white">
                     <svg
                         class="fill-current h-3 w-3"
                         viewBox="0 0 20 20"
@@ -20,23 +20,23 @@ export default function Header() {
                     </svg>
                 </button>
             </div>
-            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto ">
                 <div class="text-sm lg:flex-grow">
                     <a
                         href="#responsive-header"
-                        class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-700 mr-4 text-2xl"
                     >
                         Docs
                     </a>
                     <a
                         href="#responsive-header"
-                        class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-700 hover:text-white mr-4 text-2xl"
                     >
                         Examples
                     </a>
                     <a
                         href="#responsive-header"
-                        class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white"
+                        class="block mt-4 lg:inline-block lg:mt-0 text-black hover:text-gray-700 hover:text-white text-2xl"
                     >
                         Blog
                     </a>
@@ -44,9 +44,9 @@ export default function Header() {
                 <div>
                     <a
                         href="#"
-                        class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
+                        class="inline-block text-sm px-4 py-2 leading-none border rounded text-black border-black hover:border-transparent hover:text-white hover:bg-black mt-4 lg:mt-0 text-2xl"
                     >
-                        Download
+                        Edit
                     </a>
                 </div>
             </div>
