@@ -1,4 +1,4 @@
-import Footer from '../footer'
+import Footer from '../Globals/footer'
 import Meta from '../meta'
 
 export default function Layout({ preview, children }) {

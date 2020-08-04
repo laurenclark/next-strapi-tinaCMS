@@ -8,7 +8,7 @@ import { InlineForm } from 'react-tinacms-inline'
 
 import { DeleteWidget } from '../../widgets/deletePosts'
 import Container from '../../components/container'
-import Header from '../../components/header'
+import Header from '../../components/Globals/header'
 import Layout from '../../components/Layouts/layout'
 import PostHeader from '../../components/BlogPosts/SinglePost/post-header'
 import PostTitle from '../../components/BlogPosts/SinglePost/post-title'
