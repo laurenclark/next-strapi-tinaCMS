@@ -4,8 +4,8 @@ import { fetchGraphql } from 'react-tinacms-strapi'
 import { CMS_NAME } from '../lib/constants'
 
 import Container from '../components/container'
-import Layout from '../components/layout'
 import BlogPosts from '../components/BlogPosts'
+import Layout from '../components/Layouts/layout'
 
 export default function Index({ allPosts }) {
     return (
