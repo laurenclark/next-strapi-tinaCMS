@@ -6,6 +6,7 @@ import { fetchGraphql } from 'react-tinacms-strapi'
 import { useCMS, useForm, usePlugin } from 'tinacms'
 import { InlineForm } from 'react-tinacms-inline'
 
+import { DeleteWidget } from '../../widgets/deletePosts'
 import Container from '../../components/container'
 import Header from '../../components/header'
 import Layout from '../../components/layout'
@@ -17,6 +18,7 @@ import { CMS_NAME } from '../../lib/constants'
 
 export default function Post({ post: initialPost, preview }) {
     const cms = useCMS()
+    cms.plugins.add(DeleteWidget)
     // 📝 https://tinacms.org/docs/plugins/forms
 
     // 💬 The config object for the fields.
