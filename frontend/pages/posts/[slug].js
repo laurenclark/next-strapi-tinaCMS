@@ -3,7 +3,7 @@ import ErrorPage from 'next/error'
 import Head from 'next/head'
 
 import { fetchGraphql } from 'react-tinacms-strapi'
-import { useCMS, useForm, usePlugin, usePlugins } from 'tinacms'
+import { useCMS, useForm, usePlugin } from 'tinacms'
 import { InlineForm } from 'react-tinacms-inline'
 
 import Container from '../../components/container'
