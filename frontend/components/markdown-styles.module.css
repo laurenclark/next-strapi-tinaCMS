@@ -15,10 +15,6 @@
 }
 
 .markdown,
-.wysiwyg-wrapper blockquote {
-}
-
-.markdown,
 .wysiwyg-wrapper h2 {
     @apply text-3xl mt-12 mb-4 leading-snug  font-semibold;
 }
@@ -50,4 +46,11 @@
 }
 .editormd-styles h5 {
     @apply font-semibold;
+}
+
+.editormd-styles p,
+.editormd-styles ul,
+.editormd-styles ol,
+.editormd-styles blockquote {
+    @apply my-6 text-lg leading-relaxed font-normal;
 }
