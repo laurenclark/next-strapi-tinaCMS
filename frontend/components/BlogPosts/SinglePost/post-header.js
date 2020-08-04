@@ -10,7 +10,6 @@ export default function PostHeader({ title, coverImage, date, author }) {
     return (
         <>
             <PostTitle>
-                {/* Replace the child property with a child component with the name=title */}
                 <InlineTextarea name="title" />
             </PostTitle>
             <div className="hidden md:block md:mb-12">
