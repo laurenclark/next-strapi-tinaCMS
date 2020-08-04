@@ -4,10 +4,6 @@ p {
     @apply my-5 subpixel-antialiased antialiased leading-relaxed;
 }
 
-a {
-    @apply text-blue-600 underline;
-}
-
 /* Start purging... */
 @tailwind components;
 /* Stop purging. */

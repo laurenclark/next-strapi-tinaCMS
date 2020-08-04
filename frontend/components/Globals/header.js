@@ -5,13 +5,13 @@ export default function Header() {
         <nav class="flex items-center justify-between flex-wrap p-6 mb-10 border-b">
             <div class="flex items-center flex-shrink-0 text-black mr-6">
                 <span class="font-semibold text-6xl font-bold tracking-tight">
-                    TinaCMS.
+                    <a href="/">TinaCMS.</a>
                 </span>
             </div>
             <div class="block lg:hidden">
                 <button class="flex items-center px-3 py-2 text-black border-teal-400 hover:text-white hover:border-white">
                     <svg
-                        class="fill-current h-3 w-3"
+                        class="fill-current h-8 w-8"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
                     >
