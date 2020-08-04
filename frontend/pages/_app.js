@@ -18,10 +18,8 @@ export default function App({ Component, pageProps }) {
             new TinaCMS({
                 // Only enable for those with permissions
                 enabled: pageProps.preview,
-                toolbar: true,
-                sidebar: {
-                    position: 'overlay'
-                },
+                toolbar: pageProps.preview,
+                sidebar: pageProps.preview,
                 apis: {
                     strapi: new StrapiClient(process.env.STRAPI_URL)
                 },
@@ -29,7 +27,7 @@ export default function App({ Component, pageProps }) {
                     store: new StrapiMediaStore(process.env.STRAPI_URL)
                 }
             }),
-        [pageProps.preview]
+        []
     )
     return (
         <TinaProvider cms={cms}>
