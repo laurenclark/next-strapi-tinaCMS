@@ -24,7 +24,7 @@
 
 ## Strapi (Backend)
 
-Admin -> http://localhost:1337/admin
+Admin -> http://localhost:1337/dashboard
 
 `yarn develop`
 
@@ -44,6 +44,10 @@ Client -> http://localhost:3000
 -   Create an authorised user in order to log in and edit, you'll need all permissions for content-types and all permissions for Uploads (or you won't be able to upload images to the media library)
 
 Note: The DB is SQLlite and local so not in the repo, you'll need to add some dummy content to view.
+
+## To Edit
+
+Visit http://localhost:3000/api/preview to enable edit mode.
 
 ### Imports Organisation
 
