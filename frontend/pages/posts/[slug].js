@@ -34,11 +34,12 @@ export default function Post({ post: initialPost, preview }) {
                     $content: String
                     $coverImageId: ID
                     $slug: String
+                    $excerpt: String
                 ) {
                     updateBlogPost(
                     input: {
                         where: { id: $id }
-                        data: { title: $title, content: $content, coverImage: $coverImageId, slug: $slug}
+                        data: { title: $title, content: $content, coverImage: $coverImageId, slug: $slug, excerpt: $excerpt}
                     }
                         ) {
                         blogPost {
@@ -51,6 +52,7 @@ export default function Post({ post: initialPost, preview }) {
                 title: values.title,
                 content: values.content,
                 slug: values.slug,
+                excerpt: values.excerpt,
                 coverImageId: cms.media.store.getFileId(values.coverImage.url)
             })
             if (response.data) {
@@ -75,6 +77,12 @@ export default function Post({ post: initialPost, preview }) {
                 component: 'text',
                 label: 'Slug',
                 description: '/posts/your-slug-here'
+            },
+            {
+                name: 'excerpt',
+                component: 'textarea',
+                label: 'Excerpt to Show',
+                description: 'A few lines from the start of your post'
             }
         ]
     }
@@ -147,6 +155,7 @@ export async function getStaticProps({ params, preview, previewData }) {
             date
             slug
             content
+            excerpt
             author {
                 name
                 picture { 
