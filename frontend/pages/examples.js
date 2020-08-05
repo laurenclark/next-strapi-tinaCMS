@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import Container from '../components/container'
+import Container from '../components/ui/container'
 import Layout from '../components/layouts/layout'
 import Header from '../components/globals/header'
 
