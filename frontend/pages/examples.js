@@ -1,8 +1,8 @@
 import Head from 'next/head'
 
 import Container from '../components/container'
-import Layout from '../components/Layouts/layout'
-import Header from '../components/Globals/header'
+import Layout from '../components/layouts/layout'
+import Header from '../components/globals/header'
 
 export default function Index({ allPosts }) {
     return (

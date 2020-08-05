@@ -2,8 +2,8 @@ import { InlineTextarea, InlineImage } from 'react-tinacms-inline'
 import { useCMS } from 'tinacms'
 
 import PostTitle from './post-title'
-import DateFormater from '../../date-formater'
-import Avatar from '../../avatar'
+import DateFormater from '../../utility/date-formater'
+import Avatar from '../../author/avatar'
 
 export default function PostHeader({ title, coverImage, date, author }) {
     const cms = useCMS()

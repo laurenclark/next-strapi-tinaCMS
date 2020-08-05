@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import { fetchGraphql } from 'react-tinacms-strapi'
 
-import Container from '../components/container'
-import BlogPosts from '../components/BlogPosts'
-import Layout from '../components/Layouts/layout'
-import Header from '../components/Globals/header'
+import Container from '../components/ui/container'
+import BlogPosts from '../components/blog-posts'
+import Layout from '../components/layouts/layout'
+import Header from '../components/globals/header'
 
 export default function Blogw({ allPosts }) {
     return (

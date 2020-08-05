@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import Avatar from '../../avatar'
-import DateFormater from '../../date-formater'
-import CoverImage from '../../cover-image'
+import Avatar from '../../author/avatar'
+import CoverImage from '../../ui/cover-image'
+import DateFormater from '../../utility/date-formater'
 
 export default function PostPreview({
     title,

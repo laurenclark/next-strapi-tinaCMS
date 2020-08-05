@@ -7,12 +7,12 @@ import { useCMS, useForm, usePlugin } from 'tinacms'
 import { InlineForm } from 'react-tinacms-inline'
 
 import { DeleteWidget } from '../../widgets/deletePosts'
-import Container from '../../components/container'
-import Header from '../../components/Globals/header'
-import Layout from '../../components/Layouts/layout'
-import PostHeader from '../../components/BlogPosts/SinglePost/post-header'
-import PostTitle from '../../components/BlogPosts/SinglePost/post-title'
-import PostBody from '../../components/BlogPosts/SinglePost/post-body'
+import Container from '../../components/ui/container'
+import Header from '../../components/globals/header'
+import Layout from '../../components/layouts/layout'
+import PostHeader from '../../components/blog-posts/single-post/post-header'
+import PostTitle from '../../components/blog-posts/single-post/post-title'
+import PostBody from '../../components/blog-posts/single-post/post-body'
 
 import { CMS_NAME } from '../../lib/constants'
 

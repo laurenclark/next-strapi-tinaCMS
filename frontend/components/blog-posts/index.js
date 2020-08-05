@@ -1,4 +1,4 @@
-import PostPreview from './SinglePost/post-preview'
+import PostPreview from './single-post/post-preview'
 
 export default function BlogPosts({ posts }) {
     return (

@@ -1,5 +1,5 @@
-import Footer from '../Globals/footer'
-import Meta from '../meta'
+import Footer from '../globals/footer'
+import Meta from '../utility/meta'
 
 export default function Layout({ preview, children }) {
     return (
