@@ -1,0 +1,20 @@
+{
+    "collectionName": "components_test_test_components",
+    "info": {
+        "name": "test-component",
+        "icon": "allergies"
+    },
+    "options": {},
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "wysiwyg": {
+            "type": "richtext"
+        },
+        "blocks_maybe": {
+            "type": "enumeration",
+            "enum": ["one", "two", "three", "four"]
+        }
+    }
+}

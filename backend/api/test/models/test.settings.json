@@ -1,0 +1,17 @@
+{
+    "kind": "collectionType",
+    "collectionName": "tests",
+    "info": {
+        "name": "test"
+    },
+    "options": {
+        "increments": true,
+        "timestamps": true
+    },
+    "attributes": {
+        "Builder": {
+            "type": "dynamiczone",
+            "components": ["test.test-component"]
+        }
+    }
+}

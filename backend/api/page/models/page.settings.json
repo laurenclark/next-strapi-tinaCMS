@@ -1,0 +1,20 @@
+{
+    "kind": "collectionType",
+    "collectionName": "pages",
+    "info": {
+        "name": "Page"
+    },
+    "options": {
+        "increments": true,
+        "timestamps": true
+    },
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "slug": {
+            "type": "uid",
+            "targetField": "title"
+        }
+    }
+}
