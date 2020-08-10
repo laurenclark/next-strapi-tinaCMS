@@ -119,7 +119,7 @@ export default function Post({ post: initialPost, preview }) {
                                     property="og:image"
                                     content={
                                         process.env.STRAPI_URL +
-                                        post.coverImage.url
+                                        post?.coverImage?.url
                                     }
                                 />
                             </Head>
@@ -129,7 +129,7 @@ export default function Post({ post: initialPost, preview }) {
                                     title={post.title}
                                     coverImage={
                                         process.env.STRAPI_URL +
-                                        post.coverImage.url
+                                        post?.coverImage?.url
                                     }
                                     date={post.date}
                                     author={post.author}

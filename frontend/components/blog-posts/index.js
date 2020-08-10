@@ -9,12 +9,12 @@ export default function BlogPosts({ posts }) {
                         key={post.slug}
                         title={post.title}
                         coverImage={
-                            process.env.STRAPI_URL + post.coverImage.url
+                            process.env.STRAPI_URL + post?.coverImage?.url
                         }
-                        date={post.date}
-                        author={post.author}
-                        slug={post.slug}
-                        excerpt={post.excerpt}
+                        date={post?.date}
+                        author={post?.author}
+                        slug={post?.slug}
+                        excerpt={post?.excerpt}
                     />
                 ))}
             </div>
