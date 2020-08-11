@@ -10,7 +10,6 @@ const previewHandler = (req, res) => {
 
     res.setPreviewData(previewData)
     res.status(200).end()
-    window.history.back()
 }
 
 export default previewHandler
