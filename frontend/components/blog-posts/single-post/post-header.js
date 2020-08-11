@@ -4,6 +4,7 @@ import { useCMS } from 'tinacms'
 import PostTitle from './post-title'
 import DateFormater from '../../utility/date-formater'
 import Avatar from '../../author/avatar'
+import CoverImage from '../../ui/cover-image'
 
 export default function PostHeader({ title, coverImage, date, author }) {
     const cms = useCMS()
@@ -24,7 +25,7 @@ export default function PostHeader({ title, coverImage, date, author }) {
                 {/*  💬 Here we used the useCMS hook to get access to our CMS object. In
                 _app.js we've attached a Strapi media store to this object, and we need 
                 access to that here to help us resolve image urls. */}
-                {coverImage.url && (
+                {coverImage && (
                     <InlineImage
                         name="coverImage.url"
                         previewSrc={(formValues) => {
@@ -45,7 +46,8 @@ export default function PostHeader({ title, coverImage, date, author }) {
                             />
                         )}
                     </InlineImage>
-                )}
+                )}{' '}
+                */}
             </div>
             <div className="max-w-2xl mx-auto">
                 <div className="block md:hidden mb-6">
