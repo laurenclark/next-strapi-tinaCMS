@@ -46,8 +46,7 @@ export default function PostHeader({ title, coverImage, date, author }) {
                             />
                         )}
                     </InlineImage>
-                )}{' '}
-                */}
+                )}
             </div>
             <div className="max-w-2xl mx-auto">
                 <div className="block md:hidden mb-6">
