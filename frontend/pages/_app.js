@@ -8,7 +8,6 @@ import {
 } from 'react-tinacms-strapi'
 import { TinaCMS, TinaProvider } from 'tinacms'
 
-import Button from '../components/ui/button'
 import '../styles/index.css'
 
 export default function App({ Component, pageProps }) {
@@ -37,16 +36,4 @@ export default function App({ Component, pageProps }) {
             </StrapiProvider>
         </TinaProvider>
     )
-}
-
-const enterEditMode = () => {
-    return fetch(`/api/preview`).then(() => {
-        window.location.href = window.location.pathname
-    })
-}
-
-const exitEditMode = () => {
-    return fetch(`/api/reset-preview`).then(() => {
-        window.location.reload()
-    })
 }
