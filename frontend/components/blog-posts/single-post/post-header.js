@@ -37,9 +37,12 @@ export default function PostHeader({ title, coverImage, date, author }) {
                         }}
                         uploadDir={() => '/uploads'}
                         parse={(filename) => {
-                            return `/uploads/${filename}`
+                            if (coverImage.url) {
+                                return `/uploads/${filename}`
+                            }
                         }}
                     >
+                        {/* It needs this anon func for when getInitialProps runs */}
                         {() => (
                             <img
                                 src={coverImage}
