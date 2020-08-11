@@ -29,16 +29,21 @@ export default function PostHeader({ title, coverImage, date, author }) {
                     <InlineImage
                         name="coverImage.url"
                         previewSrc={(formValues) => {
-                            process.env.STRAPI_URL +
-                                cms.media.store.getFilePath(
-                                    formValues.coverImage.url
-                                )
+                            if (coverImage.url) {
+                                process.env.STRAPI_URL +
+                                    cms.media.store.getFilePath(
+                                        formValues?.coverImage?.url
+                                    )
+                            }
                         }}
                         uploadDir={() => '/uploads'}
                         parse={(filename) => {
-                            return `/uploads/${filename}`
+                            if (coverImage.url) {
+                                return `/uploads/${filename}`
+                            }
                         }}
                     >
+                        {/* It needs this anon func for when getInitialProps runs */}
                         {() => (
                             <img
                                 src={coverImage}
