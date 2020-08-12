@@ -1,6 +1,4 @@
 import { useMemo } from 'react'
-
-import { useCMS } from '@tinacms/react-core'
 import {
     StrapiMediaStore,
     StrapiProvider,
