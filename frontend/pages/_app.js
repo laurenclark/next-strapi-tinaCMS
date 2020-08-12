@@ -6,6 +6,9 @@ import {
 } from 'react-tinacms-strapi'
 import { TinaCMS, TinaProvider } from 'tinacms'
 
+// 💬 In NextJS you can only import globally here.
+// Other files must use CSSinJS or css modules
+// https://github.com/css-modules/css-modules
 import '../styles/index.css'
 
 export default function App({ Component, pageProps }) {
