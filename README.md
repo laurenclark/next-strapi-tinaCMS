@@ -1,3 +1,6 @@
+Really cool little "not-a-cms" tool. In a nutshell it's an admin layer built in React that you can use with a JAM client to create a drag/drop user experience which saves to a backend, I've gone fully OS here and used Strapi. Bit fiddly to put together but an interesting concept and I'm watching the project closely. It's still pre version 1 and has lots of snags to be worked out, but this has huge potential to make a great small website or blogging platform for a user or client.
+
+
 <p align="center">
   <a href="https://tinacms.org">
     <img style="padding-right: 16px;"  src="./static/tina.svg" width="50" height="36">
